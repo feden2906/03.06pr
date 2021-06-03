@@ -15,8 +15,7 @@ export class PostsComponent implements OnInit {
   constructor(private postsServices: PostsService, private router: Router, private activatedRoute: ActivatedRoute) {
     this.activatedRoute.params.subscribe(params => {
       this.id = this.router.getCurrentNavigation()?.extras.state as any;
-      console.log(this.id)
-      this.postsServices.getPostsOfUsers(this.id.id).subscribe(posts => console.log(posts))
+      this.postsServices.getPostsOfUsers(this.id.id).subscribe(posts => this.posts = posts);
     })
   }
 
