@@ -6,6 +6,7 @@ import { UsersComponent } from './components/users/users.component';
 import {HttpClientModule} from "@angular/common/http";
 import {UsersService} from "./services/users.service";
 import { UserComponent } from './components/user/user.component';
+import {PostsModule} from "../posts/posts.module";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { UserComponent } from './components/user/user.component';
   imports: [
     CommonModule,
     UsersRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    PostsModule
   ],
   providers: [UsersService]
 })

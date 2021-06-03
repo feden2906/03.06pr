@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {User} from "../../models/User";
-import {PostsService} from "../../../posts/services/posts.service";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-user',
@@ -11,9 +11,9 @@ export class UserComponent {
   @Input()
   user: User;
 
-  constructor() { }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
   getPosts(): void {
-
+    this.router.navigate([this.user.id, 'posts'], {relativeTo: this.activatedRoute, state: {id: this.user.id}})
   }
 }
