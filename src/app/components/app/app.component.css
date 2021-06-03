@@ -1,0 +1,10 @@
+header {
+  background: blue;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+button {
+  height: 20px;
+}
