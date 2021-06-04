@@ -7,17 +7,18 @@ import {HttpClientModule} from "@angular/common/http";
 import {UsersService} from "./services/users.service";
 import { UserComponent } from './components/user/user.component';
 import {PostsModule} from "../posts/posts.module";
+import { PostsOfUserComponent } from './components/posts-of-user/posts-of-user.component';
 
 @NgModule({
   declarations: [
     UsersComponent,
-    UserComponent
+    UserComponent,
+    PostsOfUserComponent
   ],
   imports: [
     CommonModule,
     UsersRoutingModule,
-    HttpClientModule,
-    PostsModule
+    HttpClientModule
   ],
   providers: [UsersService]
 })

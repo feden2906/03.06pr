@@ -15,4 +15,8 @@ export class UsersService {
     return this.httpClient.get<User[]>(this.url);
   }
 
+  getPostsOfUser(id: number): Observable<any[]> {
+    return this.httpClient.get<any[]>(this.url + '/' + id + '/posts');
+  }
+
 }

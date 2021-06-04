@@ -6,12 +6,14 @@ import { PostsComponent } from './components/posts/posts.component';
 import {HttpClientModule} from "@angular/common/http";
 import {PostsService} from "./services/posts.service";
 import { PostComponent } from './components/post/post.component';
+import { CommentsOfPostComponent } from './components/comments-of-post/comments-of-post.component';
 
 
 @NgModule({
   declarations: [
     PostsComponent,
-    PostComponent
+    PostComponent,
+    CommentsOfPostComponent
   ],
   imports: [
     CommonModule,

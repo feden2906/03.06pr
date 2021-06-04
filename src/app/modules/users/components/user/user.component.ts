@@ -14,6 +14,9 @@ export class UserComponent {
   constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
   getPosts(): void {
-    this.router.navigate([this.user.id, 'posts'], {relativeTo: this.activatedRoute, state: {id: this.user.id}})
+    this.router.navigate([this.user.id, 'posts'], {
+      relativeTo: this.activatedRoute,
+      state: {id: this.user.id}
+    })
   }
 }

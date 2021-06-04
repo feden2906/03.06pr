@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {UsersComponent} from "./components/users/users.component";
-import {PostsComponent} from "../posts/components/posts/posts.component";
+import {PostsOfUserComponent} from "./components/posts-of-user/posts-of-user.component";
 
 const routes: Routes = [
   {path: '', component: UsersComponent, children: [
-      {path: ':id/posts', component: PostsComponent}
+      {path: ':id/posts', component: PostsOfUserComponent}
     ]}
 ];
 

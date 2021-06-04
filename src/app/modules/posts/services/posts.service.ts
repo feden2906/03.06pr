@@ -7,15 +7,15 @@ import {Post} from "../models/Post";
   providedIn: 'root'
 })
 export class PostsService {
-  private url: string = 'https://jsonplaceholder.typicode.com/';
+  private url: string = 'https://jsonplaceholder.typicode.com/posts';
 
   constructor(private httpClient: HttpClient) {}
 
   getPosts(): Observable<Post[]> {
-    return this.httpClient.get<Post[]>(this.url+ 'posts');
+    return this.httpClient.get<Post[]>(this.url);
   }
 
-  getPostsOfUsers(userId: number): Observable<Post[]> {
-    return this.httpClient.get<Post[]>(this.url + 'users/' + userId + '/posts');
+  getCommentsOfPost(id: number): Observable<any[]> {
+    return this.httpClient.get<any[]>(this.url + '/' + id + '/comments');
   }
 }
