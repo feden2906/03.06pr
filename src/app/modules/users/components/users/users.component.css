@@ -1,4 +1,6 @@
 .usersAndPosts {
   display: flex;
-  justify-content: space-between;
+}
+.usersAndPosts > div {
+  width: 50%;
 }

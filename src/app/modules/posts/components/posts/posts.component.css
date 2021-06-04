@@ -1,3 +1,6 @@
 .postsAndComments {
   display: flex;
 }
+.postsAndComments > div {
+  width: 50%;
+}
